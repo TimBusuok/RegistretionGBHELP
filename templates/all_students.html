@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+<body>
+{% block content %}
+<p><a href="/" style="color: red;"> <- Назад</a></p>
+<ul>
+    {% for row in list_students%}
+        <li>{{ row }}</li>
+    {% endfor %}
+   </ul>
+{% endblock %}
+</body>

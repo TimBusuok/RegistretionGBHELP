@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<form action ="" method = "post">
+    {% for row in from %}
+    <p>
+        {{ row.label }}
+        {{ row }}
+    </p>
+    {% endfor %}
+
+    {% for error in form.error %}
+    <p class="alert alert.danger" role = "alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+</form>
+{% endblock %}
